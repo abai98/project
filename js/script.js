@@ -1,15 +1,25 @@
 "use strict";
 
-// const result = confirm("Are you here?");
-// console.log(result);
+const howMuchFilms = prompt("Сколько фильмов вы уже посмотрели?", '');
 
-// const answer = prompt("Вам есть 18", "");
-// console.log(answer);
+const numberOfFilms = howMuchFilms;
 
-const answers = [];
+console.log(howMuchFilms);
 
-answers[0] = prompt("Whats your name", '');
-answers[1] = prompt("Whats your surname", '');
-answers[2] = prompt("How old are you", '');
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
-document.write(answers);
+const watchedFilms = prompt("Один из последних просмотренных фильмов?", '');
+const howMuch = prompt("На сколько оцените его?");
+
+const movies = {
+    'logan': watchedFilms,
+    'abai': howMuch
+};
+
+console.log(movies);
