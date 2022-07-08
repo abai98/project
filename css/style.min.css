@@ -1,0 +1,2 @@
+*{margin:0;padding:0}.container{width:1440px;margin:0 auto}.header .hello{width:300px;height:300px;background-color:red}.header__nav{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:space-evenly;-ms-flex-pack:space-evenly;justify-content:space-evenly}.header__nav nth-child(3){-webkit-box-flex:wrap;-ms-flex:wrap;flex:wrap}.header__nav-item a{text-decoration:none;color:red}
+/*# sourceMappingURL=style.min.css.map */
