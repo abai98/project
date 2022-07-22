@@ -83,16 +83,75 @@ const options = {
     colors: {
         border: 'black',
         bg: 'red'
+    },
+    makeTest: function() {
+        console.log("Test");
+    }
+};
+
+options.makeTest();
+
+const {border, bg} = options.colors;
+console.log(border);
+
+// console.log(Object.keys(options).length);
+
+
+// for (let key in options) {
+//     if (typeof(options[key]) === 'object') {
+//         for (let i in options[key]) {
+//             console.log(`Свойство ${i} имеет значение ${options[key][i]}`);
+//         }
+//     } else {
+//         console.log(`Свойство ${key} имеет значение ${options[key]}`);
+//     }
+// }
+
+
+
+
+const personalPlanPeter = {
+    name: "Peter",
+    age: "29",
+    skills: {
+        languages: ['ru', 'eng'],
+        programmingLangs: {
+            js: '20%',
+            php: '10%'
+        },
+        exp: '1 month'
     }
 };
 
 
-for (let key in options) {
-    if (typeof(options[key]) === 'object') {
-        for (let i in options[key]) {
-            console.log(`Свойство ${i} имеет значение ${options[key][i]}`);
+// function showExperience(plan) {
+//     for (let key in plan) {
+//         if (typeof(plan[key]) === 'object') {
+//             for (let i in plan[key]) {
+//                 if (i === 'exp') {
+//                     console.log(plan[key][i]);
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// showExperience(personalPlanPeter);
+
+
+
+function showProgrammingLangs(showYourLang) {
+    for (let key in showYourLang) {
+        if (typeof(showYourLang) === 'object') {
+            for (let i in showYourLang[key]) {
+                if (i === 'programmingLangs') {
+                    for (let j in showYourLang[key][i]) {
+                        console.log(`Язык ${j} изучен на ${showYourLang[key][i][j]}`);
+                    }
+                }
+            }
         }
-    } else {
-        console.log(`Свойство ${key} имеет значение ${options[key]}`);
     }
 }
+
+showProgrammingLangs(personalPlanPeter);
